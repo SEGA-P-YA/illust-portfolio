@@ -62,9 +62,6 @@ layout: default
 <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
   <div class="modal-backdrop" id="modalBackdrop"></div>
   <div class="modal-panel">
-    <button class="modal-close" id="modalClose" type="button" aria-label="閉じる">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
-    </button>
     <div class="modal-media"><img id="modalImg" alt="" /></div>
     <div class="modal-info">
       <p class="modal-cat" id="modalCat"></p>
@@ -73,16 +70,19 @@ layout: default
       <p class="modal-desc" id="modalDesc"></p>
       <a class="modal-detail-btn" id="modalDetailBtn" style="display:none">詳細を見る</a>
       <div class="modal-nav">
-        <button class="modal-nav-btn" id="modalPrev" type="button">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>前へ
-        </button>
         <span class="modal-counter" id="modalCounter"></span>
-        <button class="modal-nav-btn" id="modalNext" type="button">次へ
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-        </button>
       </div>
     </div>
   </div>
+  <button class="modal-close" id="modalClose" type="button" aria-label="閉じる">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <button class="modal-side-btn modal-side-prev" id="modalPrev" type="button" aria-label="前の画像">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="modal-side-btn modal-side-next" id="modalNext" type="button" aria-label="次の画像">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
 </div>
 
 <script>

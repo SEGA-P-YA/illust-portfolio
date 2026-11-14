@@ -76,8 +76,7 @@ if (heroNext) heroNext.addEventListener("click", function () { goTo(current + 1)
 if (toggleBtn) toggleBtn.addEventListener("click", function () { setPlaying(!playing); });
 var heroEl = document.getElementById("hero");
 if (heroEl) {
-  heroEl.addEventListener("mouseenter", stopTimer);
-  heroEl.addEventListener("mouseleave", startTimer);
+  /* マウスホバーでは一時停止しない（SEGAさんの要望）。キーボード操作時のみ配慮して止める */
   heroEl.addEventListener("focusin", stopTimer);
   heroEl.addEventListener("focusout", startTimer);
 }

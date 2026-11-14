@@ -358,19 +358,26 @@ a { color: inherit; }
 .modal-detail-btn:hover { background: #3a3a42; }
 .modal-nav {
   margin-top: auto; padding-top: 18px;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: center;
   border-top: 1px solid var(--line-soft);
 }
-.modal-nav-btn {
-  display: inline-flex; align-items: center; gap: 6px;
-  border: 1px solid var(--line); background: #fff; border-radius: 999px;
-  padding: 8px 14px; font-size: 12.5px; font-weight: 700;
-}
-.modal-nav-btn:hover { border-color: #cfcfd8; }
-.modal-nav-btn svg { width: 14px; height: 14px; }
 .modal-counter { font-family: var(--font-en); font-size: 12.5px; letter-spacing: 0.14em; color: var(--muted); }
+/* 前後ボタンと閉じるボタンは画面（モーダル全体）基準で固定し、画像サイズで位置が動かないようにする */
+.modal-side-btn {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(22, 22, 30, 0.55); color: #fff;
+  display: grid; place-items: center;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 16px rgba(10, 10, 20, 0.25);
+}
+.modal-side-btn:hover { background: rgba(22, 22, 30, 0.78); }
+.modal-side-btn svg { width: 20px; height: 20px; }
+.modal-side-prev { left: 18px; }
+.modal-side-next { right: 18px; }
 .modal-close {
-  position: absolute; top: 12px; right: 12px; z-index: 2;
+  position: absolute; top: 16px; right: 16px; z-index: 3;
   width: 40px; height: 40px; border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: rgba(22, 22, 30, 0.5); color: #fff;
@@ -420,6 +427,10 @@ body.modal-open { overflow: hidden; }
   }
   .modal-media img { max-height: 52dvh; }
   .modal-info { overflow: visible; }
+  .modal-side-btn { width: 42px; height: 42px; }
+  .modal-side-prev { left: 8px; }
+  .modal-side-next { right: 8px; }
+  .modal-close { top: 10px; right: 10px; }
   .hero-caption { left: 14px; bottom: 14px; }
   .hero-caption .ttl { font-size: 13.5px; }
   .hero-ui { right: 12px; bottom: 12px; }
