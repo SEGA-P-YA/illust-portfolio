@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="760" viewBox="0 0 600 760">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2d5a3a"/><stop offset="1" stop-color="#9ad8a8"/></linearGradient></defs>
+<rect width="600" height="760" fill="url(#g)"/>
+<circle cx="420" cy="228" r="108" fill="#ffffff" opacity="0.35"/>
+<text x="50%" y="52%" font-family="sans-serif" font-size="33" fill="#ffffff" text-anchor="middle">森の精霊</text>
+<text x="50%" y="60%" font-family="sans-serif" font-size="14" fill="#ffffff" opacity="0.8" text-anchor="middle">DUMMY IMAGE</text>
+</svg>

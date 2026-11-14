@@ -1,0 +1,106 @@
+---
+layout: default
+---
+{% assign works = site.works | sort: "order" %}
+<!-- ===== Main visual slideshow (featured works) ===== -->
+<section class="hero" id="hero" aria-roledescription="carousel" aria-label="メインビジュアル">
+  {% assign first_slide = true %}
+  {% for work in works %}
+    {% if work.published == false %}{% continue %}{% endif %}
+    {% unless work.featured %}{% continue %}{% endunless %}
+    <div class="hero-slide{% if first_slide %} is-active{% endif %}">
+      <img src="{% include main_url.html image=work.image %}" alt="{{ work.title }}" {% if first_slide %}fetchpriority="high"{% else %}loading="lazy"{% endif %} />
+      <div class="hero-caption"><span class="pick">PICK UP</span><span class="ttl">{{ work.title }}</span></div>
+    </div>
+    {% assign first_slide = false %}
+  {% endfor %}
+  <span class="hero-count" id="heroCount"></span>
+  <button class="hero-btn hero-prev" id="heroPrev" type="button" aria-label="前のスライド">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="hero-btn hero-next" id="heroNext" type="button" aria-label="次のスライド">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <div class="hero-ui">
+    <div class="hero-dots" id="heroDots" role="tablist" aria-label="スライド選択"></div>
+    <button class="hero-toggle" id="heroToggle" type="button" aria-label="自動再生を停止" aria-pressed="false">
+      <svg id="heroToggleIcon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ===== 20 : 80 layout ===== -->
+<div class="layout" id="layout">
+  {% include sidebar.html %}
+
+  <main class="gallery-pane">
+    <div class="tabs-bar">
+      <ul class="tabs" id="tabs" role="tablist" aria-label="作品カテゴリー"></ul>
+    </div>
+    <div class="gallery-scroll" id="galleryScroll">
+      <div class="gallery-head">
+        <h2 id="galleryTitle">WORKS</h2>
+        <span class="sub" id="galleryCount"></span>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="empty-msg" id="emptyMsg" hidden>このカテゴリーの作品はまだありません。</p>
+
+      <section class="contact-block" id="contact" aria-label="お問い合わせ">
+        <h2>CONTACT</h2>
+        <p>イラスト制作のご依頼・ご相談を受け付けています。個人の方からのご依頼はSkebから、企業案件や継続的なお仕事はお問い合わせフォーム、またはXのDMからご連絡ください。メールアドレスはサイト上に公開していません。</p>
+        <div class="contact-actions">
+          <a class="btn-dark" href="{{ '/contact/' | relative_url }}">お問い合わせフォーム</a>
+          <a class="btn-line" href="{{ site.profile.x_dm_url }}">XのDMで相談する</a>
+        </div>
+      </section>
+      <p class="foot-note">© {{ site.profile.name }} — Portfolio</p>
+    </div>
+  </main>
+</div>
+
+<!-- ===== Modal ===== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-panel">
+    <button class="modal-close" id="modalClose" type="button" aria-label="閉じる">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+    </button>
+    <div class="modal-media"><img id="modalImg" alt="" /></div>
+    <div class="modal-info">
+      <p class="modal-cat" id="modalCat"></p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-year" id="modalYear"></p>
+      <p class="modal-desc" id="modalDesc"></p>
+      <a class="modal-detail-btn" id="modalDetailBtn" style="display:none">詳細を見る</a>
+      <div class="modal-nav">
+        <button class="modal-nav-btn" id="modalPrev" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>前へ
+        </button>
+        <span class="modal-counter" id="modalCounter"></span>
+        <button class="modal-nav-btn" id="modalNext" type="button">次へ
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+window.WORKS_DATA = [
+{% for work in works %}{% if work.published == false %}{% continue %}{% endif %}
+  {
+    "id": {{ work.slug | jsonify }},
+    "title": {{ work.title | jsonify }},
+    "cat": {{ work.category | downcase | replace: " ", "" | jsonify }},
+    "catLabel": {{ work.category | jsonify }},
+    "year": {{ work.year | jsonify }},
+    "img": "{% include main_url.html image=work.image %}",
+    "thumb": "{% include thumb_url.html work=work %}",
+    "desc": {{ work.description | jsonify }},
+    "featured": {% if work.featured %}true{% else %}false{% endif %},
+    "detailUrl": {% if work.hasDetail %}{{ work.url | relative_url | jsonify }}{% else %}null{% endif %}
+  },
+{% endfor %}
+];
+</script>
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>

@@ -1,0 +1,1 @@
+{% assign _p = include.image | remove_first: "/" %}{% assign _f = _p | split: "/" | last %}{% assign _e = _f | split: "." | last | downcase %}{% assign _b = _f | split: "." | first %}{% if _e == "svg" %}{{ _p | relative_url }}{% else %}{{ "assets/images/" | append: _b | append: "-2048.webp" | relative_url }}{% endif %}

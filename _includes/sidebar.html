@@ -1,0 +1,20 @@
+<aside class="sidebar" aria-label="プロフィール">
+  <div class="profile">
+    <img class="avatar" src="{{ site.profile.avatar | relative_url }}" alt="イラストレーターのプロフィールアイコン" width="96" height="96" />
+    <h1 class="prof-name">{{ site.profile.name }}</h1>
+    <p class="prof-id">{{ site.profile.id }}</p>
+    <p class="prof-bio">{{ site.profile.bio }}</p>
+    <ul class="prof-tags">
+      {% for tag in site.profile.tags %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
+    <p class="side-label">LINKS</p>
+    <div class="sns-list">
+      {% for link in site.profile.links %}
+      <a class="sns-btn" href="{{ link.url }}"><span class="en">{{ link.label }}</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      {% endfor %}
+    </div>
+    <p class="side-label">CONTACT</p>
+    <a class="contact-btn" href="{{ '/contact/' | relative_url }}">お問い合わせ</a>
+    <p class="contact-note">お仕事のご依頼・ご相談はこちらから。XのDMでも受け付けています。</p>
+  </div>
+</aside>

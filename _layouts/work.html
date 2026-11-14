@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<header class="page-head">
+  <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <a class="home-link" href="{{ '/' | relative_url }}">← トップへ戻る</a>
+</header>
+
+<section class="detail-page" aria-label="作品詳細">
+  <a class="back-btn" href="{{ '/' | relative_url }}" style="text-decoration:none">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    作品一覧に戻る
+  </a>
+  <div class="detail-grid">
+    <div><img class="detail-img" src="{% include main_url.html image=page.image %}" alt="{{ page.title }}" /></div>
+    <div class="detail-info">
+      <p class="detail-cat">{{ page.category }}</p>
+      <h2>{{ page.title }}</h2>
+      <p class="detail-desc">{{ page.detailDescription | default: page.description }}</p>
+      <table class="meta-table"><tbody>
+        {% if page.year %}<tr><th>制作年</th><td>{{ page.year }}年</td></tr>{% endif %}
+        {% if page.category %}<tr><th>カテゴリー</th><td>{{ page.category }}</td></tr>{% endif %}
+        {% if page.role %}<tr><th>制作担当範囲</th><td>{{ page.role }}</td></tr>{% endif %}
+        {% if page.medium %}<tr><th>使用媒体・掲載先</th><td>{{ page.medium }}</td></tr>{% endif %}
+        {% if page.client %}<tr><th>クライアント</th><td>{{ page.client }}</td></tr>{% endif %}
+      </tbody></table>
+      {% if page.relatedLink %}
+      <p class="side-label">RELATED LINKS</p>
+      <div class="rel-links">
+        <a href="{{ page.relatedLink }}">関連リンク<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<script>
+  if (typeof window.trackEvent === "function") {
+    window.trackEvent("work_detail_view", {
+      work_id: {{ page.slug | jsonify }},
+      work_title: {{ page.title | jsonify }},
+      work_category: {{ page.category | jsonify }}
+    });
+  }
+</script>

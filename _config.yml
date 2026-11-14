@@ -1,1 +1,51 @@
-# test
+# イラストポートフォリオ（本番）
+title: "イラストポートフォリオ"
+description: "アニメ・漫画風イラストのポートフォリオ。作品ギャラリー、プロフィール、お問い合わせ。"
+lang: ja
+url: "https://sega-p-ya.github.io"
+baseurl: "/illust-portfolio"
+
+# GA4の測定ID（本番URL確定後にSEGAさんのGoogleアカウントで作成して設定する）
+# 例: ga4_id: "G-XXXXXXXXXX"
+ga4_id: ""
+
+# お問い合わせフォームの送信先エンドポイント（Formspree等のフォームサービスで発行）
+# 未設定の間はフォーム送信は無効で、XのDMへの案内を表示する
+contact_form_endpoint: ""
+
+# プロフィール（当面はサイト側で固定管理。CMSの編集対象は作品のみ）
+profile:
+  name: "イラストレーター名（仮）"
+  id: "@your_id"
+  avatar: "assets/profile/avatar.svg"
+  bio: "アニメ・漫画風のイラストを描いています。二次創作を中心に活動し、Skebでの個人依頼（VTuberの方々）や、MV用イラストなどのお仕事も承っています。透明感のある色使いと、風景のあるイラストが得意です。"
+  tags:
+    - "二次創作"
+    - "VTuber"
+    - "MVイラスト"
+    - "背景・風景"
+  links:
+    - label: "X"
+      url: "#"
+    - label: "pixiv"
+      url: "#"
+    - label: "Skeb"
+      url: "#"
+  x_dm_url: "#"
+
+collections:
+  works:
+    output: true
+    permalink: /works/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: works
+    values:
+      layout: work
+
+exclude:
+  - scripts
+  - README.md
+  - .pages.yml
