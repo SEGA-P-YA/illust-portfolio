@@ -1,1 +1,18 @@
-{}
+{
+  "assets/originals/big-test.jpg": {
+    "main": {
+      "bytes": 206432,
+      "height": 1638,
+      "path": "assets/images/big-test-2048.webp",
+      "width": 2048
+    },
+    "original_bytes": 1116145,
+    "sha256": "12f6132701f94ef5bab6d24578f6b168f4171fc38a630f8f56e63afeaf8eb1bc",
+    "thumbnail": {
+      "bytes": 46608,
+      "height": 640,
+      "path": "assets/images/big-test-800.webp",
+      "width": 800
+    }
+  }
+}
