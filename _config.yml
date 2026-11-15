@@ -25,9 +25,12 @@ profile:
     - "一枚絵"
     - "SDイラスト"
   achievements:
-    - "pixivision『混乱？それとも？ぐるぐる目を描いたイラスト特集』掲載（2026年10月）"
-    - "pixivision『瞳の奥に宿す想い。「目がハート」なイラスト特集』サムネイル採用（2025年9月）"
-    - "pixivision『目を合わせちゃダメ……幽霊のイラスト特集』掲載（2025年8月）"
+    - text: "pixivision『混乱？それとも？ぐるぐる目を描いたイラスト特集』掲載（2026年10月）"
+      url: "https://www.pixivision.net/ja/a/11644"
+    - text: "pixivision『瞳の奥に宿す想い。「目がハート」なイラスト特集』サムネイル採用（2025年9月）"
+      url: "https://www.pixivision.net/ja/a/10975"
+    - text: "pixivision『目を合わせちゃダメ……幽霊のイラスト特集』掲載（2025年8月）"
+      url: "https://www.pixivision.net/ja/a/10626"
   links:
     - label: "X"
       url: "https://twitter.com/sena0708o_o"

@@ -10,7 +10,7 @@
     {% if site.profile.achievements %}
     <p class="side-label">実績</p>
     <ul class="prof-ach">
-      {% for item in site.profile.achievements %}<li>{{ item }}</li>{% endfor %}
+      {% for item in site.profile.achievements %}<li>{% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.text }}</a>{% else %}{{ item.text | default: item }}{% endif %}</li>{% endfor %}
     </ul>
     {% endif %}
     <p class="side-label">LINKS</p>
