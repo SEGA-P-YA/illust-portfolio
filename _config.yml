@@ -1,6 +1,6 @@
 # イラストポートフォリオ（本番）
-title: "イラストポートフォリオ"
-description: "アニメ・漫画風イラストのポートフォリオ。作品ギャラリー、プロフィール、お問い合わせ。"
+title: "卯月せな | イラストポートフォリオ"
+description: "イラストレーター卯月せなのポートフォリオ。VOCALOIDのMVイラストや一枚絵、SDイラストなどを制作しています。"
 lang: ja
 url: "https://sena-uduki.github.io"
 baseurl: "/illust-portfolio"
@@ -15,23 +15,27 @@ contact_form_endpoint: ""
 
 # プロフィール（当面はサイト側で固定管理。CMSの編集対象は作品のみ）
 profile:
-  name: "イラストレーター名（仮）"
-  id: "@your_id"
-  avatar: "assets/profile/avatar.svg"
-  bio: "アニメ・漫画風のイラストを描いています。二次創作を中心に活動し、Skebでの個人依頼（VTuberの方々）や、MV用イラストなどのお仕事も承っています。透明感のある色使いと、風景のあるイラストが得意です。"
+  name: "卯月せな"
+  id: "@sena0708o_o"
+  avatar: "assets/profile/avatar.webp"
+  bio: "VOCALOIDのMVイラストや一枚絵、SDイラストなど制作しています。随時ご依頼を募集しております。"
   tags:
-    - "二次創作"
-    - "VTuber"
+    - "VOCALOID"
     - "MVイラスト"
-    - "背景・風景"
+    - "一枚絵"
+    - "SDイラスト"
+  achievements:
+    - "pixivision『混乱？それとも？ぐるぐる目を描いたイラスト特集』掲載（2026年10月）"
+    - "pixivision『瞳の奥に宿す想い。「目がハート」なイラスト特集』サムネイル採用（2025年9月）"
+    - "pixivision『目を合わせちゃダメ……幽霊のイラスト特集』掲載（2025年8月）"
   links:
     - label: "X"
-      url: "#"
+      url: "https://twitter.com/sena0708o_o"
     - label: "pixiv"
-      url: "#"
+      url: "https://www.pixiv.net/users/89707784"
     - label: "Skeb"
-      url: "#"
-  x_dm_url: "#"
+      url: "https://skeb.jp/sena0708o_o"
+  x_dm_url: "https://twitter.com/sena0708o_o"
 
 collections:
   works:

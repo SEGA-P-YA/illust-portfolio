@@ -152,6 +152,15 @@ a { color: inherit; }
   background: var(--chip); color: var(--ink-soft);
   padding: 4px 10px; border-radius: 999px;
 }
+.prof-ach { margin: 0 0 22px; padding: 0; list-style: none; }
+.prof-ach li {
+  font-size: 12px; line-height: 1.75; color: var(--ink-soft);
+  padding-left: 12px; position: relative; margin-bottom: 6px;
+}
+.prof-ach li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
+}
 .side-label {
   font-family: var(--font-en);
   font-size: 11px; font-weight: 600; letter-spacing: 0.26em;

@@ -7,6 +7,12 @@
     <ul class="prof-tags">
       {% for tag in site.profile.tags %}<li>{{ tag }}</li>{% endfor %}
     </ul>
+    {% if site.profile.achievements %}
+    <p class="side-label">実績</p>
+    <ul class="prof-ach">
+      {% for item in site.profile.achievements %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+    {% endif %}
     <p class="side-label">LINKS</p>
     <div class="sns-list">
       {% for link in site.profile.links %}
