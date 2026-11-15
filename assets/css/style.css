@@ -1,5 +1,5 @@
 :root {
-  --bg: #ffffff;
+  --bg: #fefff6; /* lit.linkの背景色 rgba(253,255,229,0.36) を白地に合成した色 */
   --ink: #26262b;
   --ink-soft: #4c4c55;
   --muted: #8b8b94;
