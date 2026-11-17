@@ -130,10 +130,14 @@ function renderGallery() {
     card.className = "card";
     card.style.animationDelay = Math.min(idx * 40, 320) + "ms";
     card.setAttribute("aria-label", w.title + " を拡大表示");
+    var metaParts = [];
+    var catText = CAT_LABEL[w.cat] || w.catLabel;
+    if (catText) metaParts.push(catText);
+    if (w.year) metaParts.push(w.year);
     card.innerHTML =
       '<figure><span class="thumb"><img src="' + w.thumb + '" alt="' + w.title + '" loading="lazy" /></span>' +
       '<figcaption><span class="c-title">' + w.title + "</span>" +
-      '<span class="c-meta">' + (CAT_LABEL[w.cat] || w.catLabel) + " — " + w.year + "</span>" +
+      (metaParts.length ? '<span class="c-meta">' + metaParts.join(" — ") + "</span>" : "") +
       (w.detailUrl ? '<span class="c-detail">詳細ページあり</span>' : "") +
       "</figcaption></figure>";
     card.addEventListener("click", function () { openModal(idx); });
@@ -177,9 +181,9 @@ function fillModal() {
   if (!w) return;
   modalImg.src = w.img;
   modalImg.alt = w.title;
-  modalCat.textContent = CAT_LABEL[w.cat] || w.catLabel;
+  modalCat.textContent = CAT_LABEL[w.cat] || w.catLabel || "";
   modalTitle.textContent = w.title;
-  modalYear.textContent = w.year;
+  modalYear.textContent = w.year || "";
   modalDesc.textContent = w.desc || "";
   /* 詳細ページが設定されている作品だけボタンを出す */
   if (w.detailUrl) {
