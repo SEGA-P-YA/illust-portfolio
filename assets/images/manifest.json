@@ -15,6 +15,38 @@
       "width": 800
     }
   },
+  "assets/originals/daidai-daikirai-2.png": {
+    "main": {
+      "bytes": 207800,
+      "height": 1365,
+      "path": "assets/images/daidai-daikirai-2-2048.webp",
+      "width": 2048
+    },
+    "original_bytes": 2157492,
+    "sha256": "8b5e319fe4b3c4f1452f54d038c4620122563e001ea240e810712d79bd50f608",
+    "thumbnail": {
+      "bytes": 67682,
+      "height": 533,
+      "path": "assets/images/daidai-daikirai-2-800.webp",
+      "width": 800
+    }
+  },
+  "assets/originals/homura.png": {
+    "main": {
+      "bytes": 235166,
+      "height": 2048,
+      "path": "assets/images/homura-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 1709176,
+    "sha256": "bff71f3001a9df2ef09191c42cac0e16ea5b27f8a41ee7cb168f2ec6decfb511",
+    "thumbnail": {
+      "bytes": 73436,
+      "height": 800,
+      "path": "assets/images/homura-800.webp",
+      "width": 600
+    }
+  },
   "assets/originals/kaguya-2.png": {
     "main": {
       "bytes": 219362,
@@ -63,6 +95,150 @@
       "width": 600
     }
   },
+  "assets/originals/monitoring-2.jpg": {
+    "main": {
+      "bytes": 233070,
+      "height": 2048,
+      "path": "assets/images/monitoring-2-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 675665,
+    "sha256": "ffa26767339c60b291e00c40c8427f016b4d7d29976f0c65fb67fe47f265d5de",
+    "thumbnail": {
+      "bytes": 81056,
+      "height": 800,
+      "path": "assets/images/monitoring-2-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/monitoring.png": {
+    "main": {
+      "bytes": 272564,
+      "height": 2048,
+      "path": "assets/images/monitoring-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 1740626,
+    "sha256": "3dc5daf5b5ce9a6a59f8982bf8ea6053707174618076b3e852e7139ebe3bf66a",
+    "thumbnail": {
+      "bytes": 86714,
+      "height": 800,
+      "path": "assets/images/monitoring-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/mudai-142.jpg": {
+    "main": {
+      "bytes": 203198,
+      "height": 2048,
+      "path": "assets/images/mudai-142-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 633463,
+    "sha256": "7966d307293da888ac524bcb612162d4357b316d9040bbeac174760d39ec2518",
+    "thumbnail": {
+      "bytes": 75660,
+      "height": 800,
+      "path": "assets/images/mudai-142-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/mudai-219.png": {
+    "main": {
+      "bytes": 255830,
+      "height": 2048,
+      "path": "assets/images/mudai-219-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 1805407,
+    "sha256": "9b2a0c52851f5e344cc1d0121a3138e070a769212a8e1f227b99e257e3ee3698",
+    "thumbnail": {
+      "bytes": 88738,
+      "height": 800,
+      "path": "assets/images/mudai-219-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/mudai-230-homura.png": {
+    "main": {
+      "bytes": 87228,
+      "height": 2048,
+      "path": "assets/images/mudai-230-homura-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 648068,
+    "sha256": "323a3fac29265b72953371bbec82bad2b3d8c7f4aa39daf6f7627c7cb82b1020",
+    "thumbnail": {
+      "bytes": 33808,
+      "height": 800,
+      "path": "assets/images/mudai-230-homura-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/mudai-230-madoka.png": {
+    "main": {
+      "bytes": 127948,
+      "height": 2048,
+      "path": "assets/images/mudai-230-madoka-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 699563,
+    "sha256": "d109afd2c3733f5ab3856fec155da0860f55cf8f46869b8d6fa541fa00d8faa4",
+    "thumbnail": {
+      "bytes": 45858,
+      "height": 800,
+      "path": "assets/images/mudai-230-madoka-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/mudai-75.jpg": {
+    "main": {
+      "bytes": 229942,
+      "height": 2048,
+      "path": "assets/images/mudai-75-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 725792,
+    "sha256": "98c6eed1ceda0316506ef651f01155351c766aec8f1be01ddcc25a94cb43c6d6",
+    "thumbnail": {
+      "bytes": 87898,
+      "height": 800,
+      "path": "assets/images/mudai-75-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/override.jpg": {
+    "main": {
+      "bytes": 212262,
+      "height": 2048,
+      "path": "assets/images/override-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 578531,
+    "sha256": "2748d0ff2b4d1fc6de5e557c1d8aeef429d0b1386cc8849ad6219bb550b01285",
+    "thumbnail": {
+      "bytes": 71084,
+      "height": 800,
+      "path": "assets/images/override-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/peace.png": {
+    "main": {
+      "bytes": 285578,
+      "height": 2048,
+      "path": "assets/images/peace-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 1773583,
+    "sha256": "295e03fb1fccb9b9edeaf03557115c4a782b385fd1114ecef07173408021066e",
+    "thumbnail": {
+      "bytes": 86828,
+      "height": 800,
+      "path": "assets/images/peace-800.webp",
+      "width": 600
+    }
+  },
   "assets/originals/sonic.png": {
     "main": {
       "bytes": 348608,
@@ -92,6 +268,38 @@
       "bytes": 77130,
       "height": 800,
       "path": "assets/images/wasu-marguerite-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/yachiyo.jpg": {
+    "main": {
+      "bytes": 254144,
+      "height": 2048,
+      "path": "assets/images/yachiyo-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 659307,
+    "sha256": "d7d277c234b7bf0773acf57c987a97bd89d4ceb8635c04c91e381a450b081df1",
+    "thumbnail": {
+      "bytes": 79976,
+      "height": 800,
+      "path": "assets/images/yachiyo-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/yararara.jpg": {
+    "main": {
+      "bytes": 183440,
+      "height": 2048,
+      "path": "assets/images/yararara-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 529417,
+    "sha256": "14630f57b9335ef24200fff5163280f5a1f83377a7bd98294d52fef755faab8e",
+    "thumbnail": {
+      "bytes": 61654,
+      "height": 800,
+      "path": "assets/images/yararara-800.webp",
       "width": 600
     }
   }
