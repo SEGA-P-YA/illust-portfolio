@@ -48,6 +48,7 @@ a { color: inherit; }
   position: absolute; inset: 0; z-index: 1;
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: 50% 25%;
 }
 .hero-slide::after {
   content: "";
