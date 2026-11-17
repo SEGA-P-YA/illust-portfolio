@@ -39,6 +39,7 @@ a { color: inherit; }
 }
 .hero-slide {
   position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
   opacity: 0;
   transition: opacity 0.9s ease;
   pointer-events: none;
@@ -54,8 +55,8 @@ a { color: inherit; }
 .hero-slide .hero-main {
   position: relative; z-index: 1;
   display: block;
-  width: min(520px, 88vw); height: 100%;
-  margin: 0 auto;
+  width: min(1100px, 92vw);
+  height: min(700px, 78dvh);
   object-fit: contain;
 }
 .hero-slide::after {
@@ -449,7 +450,7 @@ body.modal-open { overflow: hidden; }
   body { min-height: 0; }
   .hero { height: 76dvh; aspect-ratio: auto; max-height: none; }
   .hero-bg { display: none; }
-  .hero-slide .hero-main { width: 100%; }
+  .hero-slide .hero-main { width: 100%; height: 100%; }
   .layout { display: block; }
   .sidebar {
     position: static; height: auto; max-height: none;
