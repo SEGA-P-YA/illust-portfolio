@@ -3,7 +3,7 @@ title: ほむら
 slug: homura
 image: /assets/originals/homura.png
 order: 21
-published: false
+published: true
 featured: false
 hasDetail: false
 ---

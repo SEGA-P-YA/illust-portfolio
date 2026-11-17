@@ -9,7 +9,6 @@ layout: default
     {% if work.published == false %}{% continue %}{% endif %}
     {% unless work.featured %}{% continue %}{% endunless %}
     <div class="hero-slide{% if first_slide %} is-active{% endif %}">
-      <img class="hero-bg" src="{% include thumb_url.html work=work %}" alt="" aria-hidden="true" loading="lazy" />
       <img class="hero-main" src="{% include main_url.html image=work.image %}" alt="{{ work.title }}" {% if first_slide %}fetchpriority="high"{% else %}loading="lazy"{% endif %} />
       <div class="hero-caption"><span class="pick">PICK UP</span><span class="ttl">{{ work.title }}</span></div>
     </div>

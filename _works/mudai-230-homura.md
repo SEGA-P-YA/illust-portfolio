@@ -4,7 +4,7 @@ slug: mudai-230-homura
 image: /assets/originals/mudai-230-homura.png
 category: FAN ART
 order: 29
-published: false
+published: true
 featured: false
 hasDetail: false
 ---
