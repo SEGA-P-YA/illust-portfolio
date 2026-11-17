@@ -14,5 +14,85 @@
       "path": "assets/images/big-test-800.webp",
       "width": 800
     }
+  },
+  "assets/originals/kaguya-2.png": {
+    "main": {
+      "bytes": 219362,
+      "height": 2048,
+      "path": "assets/images/kaguya-2-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 1603443,
+    "sha256": "f7b7451b6b73364486fb886e4015b38555ed1237fcd12a1872be33768d2e2629",
+    "thumbnail": {
+      "bytes": 65652,
+      "height": 800,
+      "path": "assets/images/kaguya-2-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/kaguya.png": {
+    "main": {
+      "bytes": 263504,
+      "height": 2048,
+      "path": "assets/images/kaguya-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 2141408,
+    "sha256": "df6166d405107d74dce7ab958e0a5f88ba0af94bf599688245526e9d6175c03c",
+    "thumbnail": {
+      "bytes": 81070,
+      "height": 800,
+      "path": "assets/images/kaguya-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/kocho-kocho.png": {
+    "main": {
+      "bytes": 358538,
+      "height": 2048,
+      "path": "assets/images/kocho-kocho-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 2864559,
+    "sha256": "23d76ebe314a0b8a52044ddaf3b34f2d267a7e9a757767fbbfdec43c8905b81f",
+    "thumbnail": {
+      "bytes": 105408,
+      "height": 800,
+      "path": "assets/images/kocho-kocho-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/sonic.png": {
+    "main": {
+      "bytes": 348608,
+      "height": 2048,
+      "path": "assets/images/sonic-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 1724406,
+    "sha256": "59cffba56564150533fe8a1f4ec4bc6b2ada9bddb98b0e63fbde2fb7d6e6619f",
+    "thumbnail": {
+      "bytes": 106596,
+      "height": 800,
+      "path": "assets/images/sonic-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/wasu-marguerite.png": {
+    "main": {
+      "bytes": 250708,
+      "height": 2048,
+      "path": "assets/images/wasu-marguerite-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 1872554,
+    "sha256": "8ce7f43d341e59a2e5a4ed228cc5e2e4a32ae000fa8f965fa2a7b7531352433d",
+    "thumbnail": {
+      "bytes": 77130,
+      "height": 800,
+      "path": "assets/images/wasu-marguerite-800.webp",
+      "width": 600
+    }
   }
 }
