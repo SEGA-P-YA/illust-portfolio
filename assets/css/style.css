@@ -50,6 +50,8 @@ a { color: inherit; }
   object-fit: cover;
   object-position: 50% 25%;
 }
+/* Sonic's face sits high in the frame, so this slide crops from nearer the top. */
+.hero-slide--sonic .hero-main { object-position: 50% 8%; }
 .hero-slide::after {
   content: "";
   position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
