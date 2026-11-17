@@ -24,6 +24,14 @@ var dotsWrap = document.getElementById("heroDots");
 var heroCount = document.getElementById("heroCount");
 var toggleBtn = document.getElementById("heroToggle");
 var toggleIcon = document.getElementById("heroToggleIcon");
+var scrollHint = document.querySelector(".hero-scroll");
+if (scrollHint) {
+  var onScrollHint = function () {
+    scrollHint.classList.toggle("is-hidden", window.scrollY > 40);
+  };
+  window.addEventListener("scroll", onScrollHint, { passive: true });
+  onScrollHint();
+}
 var ICON_PAUSE = '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>';
 var ICON_PLAY = '<path d="M8 5.5v13l11-6.5z"/>';
 var current = 0, timer = null, DELAY = 5500;
