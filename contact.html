@@ -6,7 +6,8 @@ permalink: /contact/
 {% assign skeb = site.profile.links | where: "label", "Skeb" | first %}
 <main class="contact-page">
   <h1>CONTACT</h1>
-  <p>イラスト制作のご依頼は随時募集中です。<br />お問い合わせはXのDMからご連絡ください。通常、数日以内に返信します。<br />個人の方からのご依頼はSkebからも受け付けています。</p>
+  <p>イラスト制作のご依頼は随時募集中です。<br />ご相談・お問い合わせはXのDMからご連絡ください。<br />Skebでもリクエストを受け付けています。</p>
+  <p class="form-note">通常、数日以内に返信します。</p>
   <div class="contact-actions" style="margin-top:14px">
     <a class="btn-dark" id="xDmBtn" href="{{ site.profile.x_dm_url }}">XのDMで相談する</a>
     {% if skeb %}<a class="btn-line" href="{{ skeb.url }}">Skebで依頼する</a>{% endif %}
