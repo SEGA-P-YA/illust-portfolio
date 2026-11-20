@@ -120,15 +120,22 @@ if (tabsEl) {
   });
 }
 
-/* グリッドの行またぎ（masonry）をカードの実高さに合わせる */
+/* グリッドの行またぎ（masonry）を、画像の原寸比率から計算して決める。
+   実測に頼ると、読み込み途中の高さで計算してしまうことがあるため使わない。 */
 function sizeGridCard(card) {
+  var img = card.querySelector("img");
+  if (!img || !img.naturalWidth || !img.naturalHeight) return;
   var style = window.getComputedStyle(gridEl);
-  var rowHeight = parseFloat(style.getPropertyValue("grid-auto-rows")) || 10;
+  var cols = style.getPropertyValue("grid-template-columns").split(" ").length;
+  var colGap = parseFloat(style.getPropertyValue("column-gap")) || 0;
   var rowGap = parseFloat(style.getPropertyValue("row-gap")) || 0;
-  var content = card.querySelector("figure");
-  if (!content) return;
-  var h = content.getBoundingClientRect().height;
-  var span = Math.max(1, Math.ceil((h + rowGap) / (rowHeight + rowGap)));
+  var rowHeight = parseFloat(style.getPropertyValue("grid-auto-rows")) || 10;
+  var colW = (gridEl.clientWidth - (cols - 1) * colGap) / cols;
+  var w = card.classList.contains("card--wide") ? colW * 2 + colGap : colW;
+  var imgH = w * (img.naturalHeight / img.naturalWidth);
+  var cap = card.querySelector("figcaption");
+  var capH = cap ? cap.offsetHeight : 0;
+  var span = Math.max(1, Math.ceil((imgH + capH + rowGap) / (rowHeight + rowGap)));
   card.style.gridRowEnd = "span " + span;
 }
 function sizeAllGridCards() {
@@ -142,6 +149,7 @@ window.addEventListener("resize", function () {
   if (gridResizeTimer) clearTimeout(gridResizeTimer);
   gridResizeTimer = setTimeout(sizeAllGridCards, 150);
 });
+window.addEventListener("load", function () { sizeAllGridCards(); });
 
 function renderGallery() {
   if (!gridEl) return;
