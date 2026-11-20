@@ -120,6 +120,29 @@ if (tabsEl) {
   });
 }
 
+/* グリッドの行またぎ（masonry）をカードの実高さに合わせる */
+function sizeGridCard(card) {
+  var style = window.getComputedStyle(gridEl);
+  var rowHeight = parseFloat(style.getPropertyValue("grid-auto-rows")) || 10;
+  var rowGap = parseFloat(style.getPropertyValue("row-gap")) || 0;
+  var content = card.querySelector("figure");
+  if (!content) return;
+  var h = content.getBoundingClientRect().height;
+  var span = Math.max(1, Math.ceil((h + rowGap) / (rowHeight + rowGap)));
+  card.style.gridRowEnd = "span " + span;
+}
+function sizeAllGridCards() {
+  if (!gridEl) return;
+  Array.prototype.forEach.call(gridEl.children, function (c) {
+    if (c.classList && c.classList.contains("card")) sizeGridCard(c);
+  });
+}
+var gridResizeTimer = null;
+window.addEventListener("resize", function () {
+  if (gridResizeTimer) clearTimeout(gridResizeTimer);
+  gridResizeTimer = setTimeout(sizeAllGridCards, 150);
+});
+
 function renderGallery() {
   if (!gridEl) return;
   visibleWorks = activeCat === "all" ? WORKS.slice() : WORKS.filter(function (w) { return w.cat === activeCat; });
@@ -142,7 +165,15 @@ function renderGallery() {
       "</figcaption></figure>";
     card.addEventListener("click", function () { openModal(idx); });
     gridEl.appendChild(card);
+    var cardImg = card.querySelector("img");
+    var onCardImg = function () {
+      if (cardImg.naturalWidth > cardImg.naturalHeight) card.classList.add("card--wide");
+      sizeAllGridCards();
+    };
+    if (cardImg.complete && cardImg.naturalWidth > 0) onCardImg();
+    else cardImg.addEventListener("load", onCardImg);
   });
+  sizeAllGridCards();
   if (emptyMsg) emptyMsg.hidden = visibleWorks.length > 0;
   var label = activeCat === "all" ? "ALL WORKS" : CAT_LABEL[activeCat];
   if (galleryTitle) galleryTitle.textContent = activeCat === "all" ? "WORKS" : CAT_LABEL[activeCat];

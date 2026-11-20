@@ -271,13 +271,14 @@ a { color: inherit; }
 }
 
 /* ---------- Gallery grid (masonry, keeps aspect ratios) ---------- */
-.grid { columns: 3 250px; column-gap: 18px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 18px; grid-auto-rows: 10px; grid-auto-flow: dense; }
 .card {
-  break-inside: avoid;
-  margin: 0 0 20px;
+  margin: 0;
   background: none; border: 0; padding: 0; text-align: left; width: 100%;
   animation: card-in 0.45s ease both;
 }
+/* 横構図の作品は2列分の幅で表示する */
+.card--wide { grid-column: span 2; }
 @keyframes card-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .card figure { margin: 0; }
 .card .thumb {
@@ -459,8 +460,7 @@ body.modal-open { overflow: hidden; }
   .tab .cnt { display: none; }
   .tab::after { left: 8px; right: 8px; }
   .gallery-scroll { padding: 4px 16px 34px; }
-  .grid { columns: 2; column-gap: 12px; }
-  .card { margin-bottom: 16px; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
   .contact-block { padding: 24px 20px 20px; }
   .detail-pane { padding: 20px 16px 40px; }
   .detail-grid { grid-template-columns: 1fr; gap: 22px; }
