@@ -3,52 +3,25 @@ layout: page
 title: お問い合わせ
 permalink: /contact/
 ---
+{% assign skeb = site.profile.links | where: "label", "Skeb" | first %}
 <main class="contact-page">
   <h1>CONTACT</h1>
-  <p>イラスト制作のご依頼・ご相談は、こちらのフォームまたはXのDMからご連絡ください。<br />通常、数日以内に返信します。</p>
-
-  {% if site.contact_form_endpoint and site.contact_form_endpoint != "" %}
-  <form class="contact-form" id="contactForm" action="{{ site.contact_form_endpoint }}" method="POST">
-    <label>お名前
-      <input type="text" name="name" required autocomplete="name" />
-    </label>
-    <label>返信先メールアドレス
-      <input type="email" name="email" required autocomplete="email" />
-    </label>
-    <label>ご相談内容
-      <textarea name="message" rows="7" required></textarea>
-    </label>
-    <!-- スパム対策：ハニーポット（人には見えない項目。入力されていたら送信を止める） -->
-    <span class="hp-field" aria-hidden="true">
-      <label>この項目は空のままにしてください
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
-      </label>
-    </span>
-    <input type="hidden" name="_subject" value="ポートフォリオからのお問い合わせ" />
-    <button type="submit">送信する</button>
-    <p class="form-note">送信内容はお問い合わせ対応のみに使用します。</p>
-  </form>
-  {% else %}
-  <div class="form-pending">
-    お問い合わせフォームは現在準備中です。お急ぎの場合は、XのDMからご連絡ください。
-    <div class="contact-actions" style="margin-top:14px">
-      <a class="btn-line" href="{{ site.profile.x_dm_url }}">XのDMで相談する</a>
-    </div>
+  <p>イラスト制作のご依頼は随時募集中です。<br />お問い合わせはXのDMからご連絡ください。通常、数日以内に返信します。<br />個人の方からのご依頼はSkebからも受け付けています。</p>
+  <div class="contact-actions" style="margin-top:14px">
+    <a class="btn-dark" id="xDmBtn" href="{{ site.profile.x_dm_url }}">XのDMで相談する</a>
+    {% if skeb %}<a class="btn-line" href="{{ skeb.url }}">Skebで依頼する</a>{% endif %}
   </div>
-  {% endif %}
 </main>
 
 <script>
   if (typeof window.trackEvent === "function") {
     window.trackEvent("contact_view", {});
   }
-  var form = document.getElementById("contactForm");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      var hp = form.querySelector('input[name="_gotcha"]');
-      if (hp && hp.value) { e.preventDefault(); return; }
+  var dmBtn = document.getElementById("xDmBtn");
+  if (dmBtn) {
+    dmBtn.addEventListener("click", function () {
       if (typeof window.trackEvent === "function") {
-        window.trackEvent("contact_submit", { method: "form" });
+        window.trackEvent("contact_submit", { method: "x_dm" });
       }
     });
   }
