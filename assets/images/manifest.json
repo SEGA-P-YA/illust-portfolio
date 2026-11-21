@@ -335,6 +335,22 @@
       "width": 600
     }
   },
+  "assets/originals/ツインバニー_Original-2.png": {
+    "main": {
+      "bytes": 262144,
+      "height": 2048,
+      "path": "assets/images/ツインバニー_Original-2-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 2861622,
+    "sha256": "3578f0002aacc6d2227c76519523510ecf96de9539b17f1a50682b72c9d46046",
+    "thumbnail": {
+      "bytes": 81048,
+      "height": 800,
+      "path": "assets/images/ツインバニー_Original-2-800.webp",
+      "width": 600
+    }
+  },
   "assets/originals/ツインバニー_Original.png": {
     "main": {
       "bytes": 262144,
@@ -348,6 +364,22 @@
       "bytes": 81048,
       "height": 800,
       "path": "assets/images/ツインバニー_Original-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/バニー_Original-1.png": {
+    "main": {
+      "bytes": 272838,
+      "height": 2048,
+      "path": "assets/images/バニー_Original-1-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 3332602,
+    "sha256": "6b922de4008749e75fea4a81e59e9cd139c521202ef63d1e32ffcc392e726391",
+    "thumbnail": {
+      "bytes": 87910,
+      "height": 800,
+      "path": "assets/images/バニー_Original-1-800.webp",
       "width": 600
     }
   },
@@ -380,6 +412,22 @@
       "bytes": 82026,
       "height": 800,
       "path": "assets/images/歌姫失格_Original-800.webp",
+      "width": 600
+    }
+  },
+  "assets/originals/誕生日2026ミク_Original.png": {
+    "main": {
+      "bytes": 278606,
+      "height": 2048,
+      "path": "assets/images/誕生日2026ミク_Original-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 1919811,
+    "sha256": "e2d79897b4defe8c19961c017216eb9ccd8bac15a2154e3b9400fb9439249fa0",
+    "thumbnail": {
+      "bytes": 87390,
+      "height": 800,
+      "path": "assets/images/誕生日2026ミク_Original-800.webp",
       "width": 600
     }
   }
