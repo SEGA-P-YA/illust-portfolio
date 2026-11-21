@@ -1,4 +1,20 @@
 {
+  "assets/originals/PPPP3_Original.png": {
+    "main": {
+      "bytes": 251242,
+      "height": 1365,
+      "path": "assets/images/PPPP3_Original-2048.webp",
+      "width": 2048
+    },
+    "original_bytes": 2724410,
+    "sha256": "c81776e02ef081711a8c94a45b79725388ccc0203bd5ffc6fd2555c7570f829a",
+    "thumbnail": {
+      "bytes": 81680,
+      "height": 533,
+      "path": "assets/images/PPPP3_Original-800.webp",
+      "width": 800
+    }
+  },
   "assets/originals/big-test.jpg": {
     "main": {
       "bytes": 206432,
