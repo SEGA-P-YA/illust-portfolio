@@ -1,9 +1,11 @@
 ---
-title: ヤチヨ
+title: 超かぐや姫 ヤチヨ
 slug: yachiyo
 image: /assets/originals/yachiyo.jpg
-order: 22
+category: FAN ART
+year: 2026.5
+order: 13
 published: true
-featured: false
+featured: true
 hasDetail: false
 ---
