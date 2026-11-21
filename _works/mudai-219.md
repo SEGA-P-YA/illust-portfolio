@@ -1,8 +1,10 @@
 ---
-title: 無題219
-slug: mudai-219
+title: アクマバライ
+slug: akumabarai
 image: /assets/originals/mudai-219.png
-order: 28
+category: FAN ART
+year: 2026.8
+order: 11
 published: true
 featured: false
 hasDetail: false
