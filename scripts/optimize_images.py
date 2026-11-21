@@ -134,6 +134,18 @@ def main() -> int:
             summary.append(f"CLEANUP (原画が無くなった生成物を削除): {rel}")
             del manifest[rel]
 
+    # manifest に記録されていない生成物（旧ファイル名の残りなど）を片付ける
+    live_outputs = {
+        entry[kind]["path"]
+        for entry in manifest.values()
+        for kind in ("main", "thumbnail")
+    }
+    for f in sorted(OUT_DIR.glob("*.webp")):
+        rel_out = f.relative_to(ROOT).as_posix()
+        if rel_out not in live_outputs:
+            f.unlink()
+            summary.append(f"CLEANUP (未使用の生成物を削除): {rel_out}")
+
     MANIFEST_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
     text = "\n".join(summary) if summary else "対象画像はありませんでした"
