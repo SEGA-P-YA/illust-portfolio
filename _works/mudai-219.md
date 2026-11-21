@@ -4,7 +4,7 @@ slug: akumabarai
 image: /assets/originals/mudai-219.png
 category: FAN ART
 year: 2026.8
-order: 11
+order: 1100
 published: true
 featured: false
 hasDetail: false

@@ -4,7 +4,7 @@ slug: terepashi
 image: /assets/originals/mudai-142.jpg
 category: FAN ART
 year: 2025.2
-order: 8
+order: 800
 published: true
 featured: false
 hasDetail: false
