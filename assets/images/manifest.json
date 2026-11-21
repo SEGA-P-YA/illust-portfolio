@@ -351,22 +351,6 @@
       "width": 600
     }
   },
-  "assets/originals/バニー_Original.png": {
-    "main": {
-      "bytes": 272838,
-      "height": 2048,
-      "path": "assets/images/バニー_Original-2048.webp",
-      "width": 1536
-    },
-    "original_bytes": 3332602,
-    "sha256": "6b922de4008749e75fea4a81e59e9cd139c521202ef63d1e32ffcc392e726391",
-    "thumbnail": {
-      "bytes": 87910,
-      "height": 800,
-      "path": "assets/images/バニー_Original-800.webp",
-      "width": 600
-    }
-  },
   "assets/originals/歌姫失格_Original.png": {
     "main": {
       "bytes": 268222,
