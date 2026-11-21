@@ -3,8 +3,9 @@ title: モニタリング
 slug: monitoring
 image: /assets/originals/monitoring.png
 category: FAN ART
-order: 18
+year: 2025.7
+order: 1
 published: true
-featured: false
+featured: true
 hasDetail: false
 ---
