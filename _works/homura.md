@@ -1,9 +1,11 @@
 ---
-title: ほむら
+title: まどマギ ほむら
 slug: homura
 image: /assets/originals/homura.png
-order: 21
+category: FAN ART
+year: 2026.9
+order: 16
 published: true
-featured: false
+featured: true
 hasDetail: false
 ---
