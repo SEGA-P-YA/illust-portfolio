@@ -318,5 +318,21 @@
       "path": "assets/images/yararara-800.webp",
       "width": 600
     }
+  },
+  "assets/originals/歌姫失格_Original.png": {
+    "main": {
+      "bytes": 268222,
+      "height": 2048,
+      "path": "assets/images/歌姫失格_Original-2048.webp",
+      "width": 1536
+    },
+    "original_bytes": 2081189,
+    "sha256": "f725a9d71c7ab94e94cbd124409200021b4e04bb9f2d3bd1466d26fad0049419",
+    "thumbnail": {
+      "bytes": 82026,
+      "height": 800,
+      "path": "assets/images/歌姫失格_Original-800.webp",
+      "width": 600
+    }
   }
 }
