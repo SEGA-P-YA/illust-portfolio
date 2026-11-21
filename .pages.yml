@@ -17,6 +17,13 @@ content:
     format: yaml-frontmatter
     extension: md
     filename: "{fields.slug}.md"
+    view:
+      fields: [image, title, category, published]
+      primary: title
+      sort: [order, title]
+      default:
+        sort: order
+        order: asc
     fields:
       - name: title
         label: タイトル
