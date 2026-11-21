@@ -319,22 +319,6 @@
       "width": 600
     }
   },
-  "assets/originals/ツインバニー_Original-1.png": {
-    "main": {
-      "bytes": 262144,
-      "height": 2048,
-      "path": "assets/images/ツインバニー_Original-1-2048.webp",
-      "width": 1536
-    },
-    "original_bytes": 2861622,
-    "sha256": "3578f0002aacc6d2227c76519523510ecf96de9539b17f1a50682b72c9d46046",
-    "thumbnail": {
-      "bytes": 81048,
-      "height": 800,
-      "path": "assets/images/ツインバニー_Original-1-800.webp",
-      "width": 600
-    }
-  },
   "assets/originals/ツインバニー_Original-2.png": {
     "main": {
       "bytes": 262144,
