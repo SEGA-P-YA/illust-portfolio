@@ -323,7 +323,7 @@
     "main": {
       "bytes": 262144,
       "height": 2048,
-      "path": "assets/images/ツインバニー_Original-1-2048.webp",
+      "path": "assets/images/ツインバニー_Original-1-2048.webp",
       "width": 1536
     },
     "original_bytes": 2861622,
@@ -331,7 +331,7 @@
     "thumbnail": {
       "bytes": 81048,
       "height": 800,
-      "path": "assets/images/ツインバニー_Original-1-800.webp",
+      "path": "assets/images/ツインバニー_Original-1-800.webp",
       "width": 600
     }
   },
@@ -339,7 +339,7 @@
     "main": {
       "bytes": 262144,
       "height": 2048,
-      "path": "assets/images/ツインバニー_Original-2-2048.webp",
+      "path": "assets/images/ツインバニー_Original-2-2048.webp",
       "width": 1536
     },
     "original_bytes": 2861622,
@@ -347,7 +347,7 @@
     "thumbnail": {
       "bytes": 81048,
       "height": 800,
-      "path": "assets/images/ツインバニー_Original-2-800.webp",
+      "path": "assets/images/ツインバニー_Original-2-800.webp",
       "width": 600
     }
   },
@@ -355,7 +355,7 @@
     "main": {
       "bytes": 262144,
       "height": 2048,
-      "path": "assets/images/ツインバニー_Original-2048.webp",
+      "path": "assets/images/ツインバニー_Original-2048.webp",
       "width": 1536
     },
     "original_bytes": 2861622,
@@ -363,7 +363,7 @@
     "thumbnail": {
       "bytes": 81048,
       "height": 800,
-      "path": "assets/images/ツインバニー_Original-800.webp",
+      "path": "assets/images/ツインバニー_Original-800.webp",
       "width": 600
     }
   },
@@ -371,7 +371,7 @@
     "main": {
       "bytes": 272838,
       "height": 2048,
-      "path": "assets/images/バニー_Original-1-2048.webp",
+      "path": "assets/images/バニー_Original-1-2048.webp",
       "width": 1536
     },
     "original_bytes": 3332602,
@@ -379,7 +379,7 @@
     "thumbnail": {
       "bytes": 87910,
       "height": 800,
-      "path": "assets/images/バニー_Original-1-800.webp",
+      "path": "assets/images/バニー_Original-1-800.webp",
       "width": 600
     }
   },
@@ -387,7 +387,7 @@
     "main": {
       "bytes": 272838,
       "height": 2048,
-      "path": "assets/images/バニー_Original-2048.webp",
+      "path": "assets/images/バニー_Original-2048.webp",
       "width": 1536
     },
     "original_bytes": 3332602,
@@ -395,7 +395,7 @@
     "thumbnail": {
       "bytes": 87910,
       "height": 800,
-      "path": "assets/images/バニー_Original-800.webp",
+      "path": "assets/images/バニー_Original-800.webp",
       "width": 600
     }
   },
