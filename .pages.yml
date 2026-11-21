@@ -34,7 +34,8 @@ content:
         type: string
         required: true
       - name: image
-        label: 作品画像（原画のままアップロードでOK・公開用に自動で最適化されます）
+        label: 作品画像
+        description: 原画のままアップロードでOK・公開用に自動で最適化されます
         type: image
         options:
           media: images
