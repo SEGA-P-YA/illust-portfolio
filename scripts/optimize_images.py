@@ -15,6 +15,7 @@ import hashlib
 import json
 import os
 import sys
+import unicodedata
 from pathlib import Path
 
 from PIL import Image, ImageOps
@@ -72,7 +73,10 @@ def main() -> int:
             summary.append(f"SKIP (未対応形式): {rel}")
             continue
 
-        base = original.stem
+        # 生成ファイル名は NFC に統一する。macOS / iOS からアップロードされた
+        # 原画はファイル名が NFD（濁点が分離した形）になっていることがあり、
+        # サイト側が要求する NFC の URL と一致せず画像が 404 になるため。
+        base = unicodedata.normalize("NFC", original.stem)
         # 同名ファイルが複数ある場合はハッシュで一意化する
         digest = sha256_of(original)
         if base in used_bases and used_bases[base] != rel:
