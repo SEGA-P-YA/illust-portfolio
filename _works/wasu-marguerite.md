@@ -1,5 +1,5 @@
 ---
-title: ワスとマルグリート
+title: まどマギ ワスとマルグリート
 slug: wasu-marguerite
 image: /assets/originals/wasu-marguerite.png
 category: FAN ART
