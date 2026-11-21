@@ -2,6 +2,7 @@
 title: 🩵PPPP🧡
 slug: pppp
 image: /assets/originals/PPPP3_Original.png
+category: FAN ART
 year: 2026.11
 order: 300
 published: true
