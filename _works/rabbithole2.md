@@ -1,7 +1,7 @@
 ---
 title: ピュアピュアやってんのん？🐰
 slug: rabbithole2
-image: /assets/originals/バニー_Original.png
+image: /assets/originals/バニー_Original-1.png
 category: FAN ART
 year: 2025.8
 order: 1111
