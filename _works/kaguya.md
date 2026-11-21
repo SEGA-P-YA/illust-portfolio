@@ -1,9 +1,11 @@
 ---
-title: かぐや
+title: 超かぐや姫 かぐや
 slug: kaguya
 image: /assets/originals/kaguya.png
-order: 13
+category: FAN ART
+year: 2026.4
+order: 14
 published: true
-featured: true
+featured: false
 hasDetail: false
 ---
