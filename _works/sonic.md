@@ -1,5 +1,5 @@
 ---
-title: ソニック
+title: 人生最愛ランナー
 slug: sonic
 image: /assets/originals/sonic.png
 category: FAN ART
